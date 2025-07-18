@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- English language for html page to output-->
+
+<!-- The heading of the naming of the page -->
+<head>
+    <meta charset="UTF-8"> <!--Standard character set for a webpage-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Standard viewing port for a webpage-->
+    <title>INDEX.HTML</title> <!--Title of webpage-->
+    <link rel="stylesheet" href="main.css"> <!--link to CSS file as a external file that points to the styling of the webpage in CSS format-->
+	</head>
+	<!--End of header code-->
+
+<html>
+</head>
+<body>
+  <div id="slideshow">                             <!-- Show images on the website but not formatted for a slideshow yet-->
+    <img src="Driving Meme.jpg" class="active" />  <!--Start of image handles-->
+    <img src="Jesus.jpg" />
+    <img src="Shorse.jpg" />
+    <img src="Work Meme.jpg" />
+
+  </div>
+
+  <script>
+    const images = document.querySelectorAll("#slideshow img"); // a constant variable called "image" and selects a image
+    let current = 0;
+
+    function showNextImage() {                                   // Array for images to cycle through
+      images[current].classList.remove("active");
+      current = (current + 1) % images.length;
+      images[current].classList.add("active");
+    }
+
+    setInterval(showNextImage, 5000); // Change image every 5 seconds
+  </script>
+</body>
+</html>
