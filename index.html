@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- English language for html page to output-->
+
+<!-- The heading of the naming of the page -->
+<head>
+    <meta charset="UTF-8"> <!--Standard character set for a webpage-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Standard viewing port for a webpage-->
+    <title>INDEX.HTML</title> <!--Title of webpage-->
+	
+	</head>
+	<!--End of header code-->
+    
+    <body> 
+        <!--start of body section-->
+        <script> 
+        // Javascript inline code start
+
+            var i = 0; // Starting point
+            var images = [];  // variable that holds the images to put into a array
+            var time = 5000; // seconds the images will display 
+
+            // Image List Array
+
+            images[0] = 'Driving Meme.jpg';
+            images[1] = 'Jesus.jpg';
+            images[2] = 'Shorse.jpg';
+            images[3] = 'Work Meme.jpg';
+
+            // Change Image Function
+
+            function changeImg(){
+                document.slide.src = images[i];
+
+                if (i < images.length - 1){
+                    i++;
+                } else{
+
+                    i = 0;
+                }
+
+                setTimeout("changeImg()", time); 
+            }
+
+            window.onload = changeImg;  // Loads display and is the placeholder for changeImg 
+            // end inline Javascript code
+        </script>
+
+        <img name="slide" width="500" height="500">  <!--Height and width of the slideshow Images-->
+        
+<!--End of Body Code-->
+    </body>
+    <!--End of body-->
+</html> <!--End of executable code-->
